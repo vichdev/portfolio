@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as Styles from "./styles";
-import pokestats from "../../assets/pokemon.svg";
+import { pokestats } from "../../assets/pokemon.svg";
+import { loveflix } from "../../assets/loveflix.png";
 import { FaAngleLeft } from "react-icons/fa";
 import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
@@ -35,7 +36,7 @@ const Activity: React.FC = () => {
         </Styles.TitleWrapper>
         <Styles.ProjectsContent>
           <Styles.ProjWrapper>
-            <Styles.ProjImg src={pokestats} />
+            <Styles.ProjImg src={pokestats} color={"#00b1f7"} />
             <Styles.Projects>
               <Styles.ProjH3>PokeStats</Styles.ProjH3>
               <Styles.ProjSpan>Website</Styles.ProjSpan>
@@ -46,7 +47,7 @@ const Activity: React.FC = () => {
             </Styles.Projects>
           </Styles.ProjWrapper>
           <Styles.ProjWrapper>
-            <Styles.ProjImg src={pokestats} />
+            <Styles.ProjImg src={loveflix} color={"#000"} />
             <Styles.Projects>
               <Styles.ProjH3>LoveFlix</Styles.ProjH3>
               <Styles.ProjSpan>Website</Styles.ProjSpan>

@@ -84,11 +84,12 @@ export const ProjImg = styled.img`
   width: 80px;
   height: 80px;
   border-radius: 9999em;
-  background-color: #00b1f7;
+  background-color: ${(props) => (props.color ? props.color : "#000")};
   align-items: center;
   display: flex;
   margin-right: 20px;
   padding: 5px;
+  box-shadow: 1px 1px 9px 1px #000;
 `;
 
 export const ProjH3 = styled.h3`
