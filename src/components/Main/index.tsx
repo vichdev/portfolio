@@ -1,8 +1,11 @@
 import React from "react";
 import * as Styles from "./styles";
 import { VscCode } from "react-icons/vsc";
+import { usePortfolio } from "../../context/AuthContext";
 
 const Main: React.FC = () => {
+  const { setAbout, about } = usePortfolio();
+
   return (
     <Styles.MainWrapper>
       <Styles.MainContent>
@@ -13,7 +16,9 @@ const Main: React.FC = () => {
             <Styles.LogoSpan>Desenvolvedor Front-END</Styles.LogoSpan>
           </Styles.LogoContent>
         </Styles.LogoWrapper>
-        <Styles.ButtonMain>Sobre mim</Styles.ButtonMain>
+        <Styles.ButtonMain onClick={() => setAbout(!about)}>
+          Sobre mim
+        </Styles.ButtonMain>
       </Styles.MainContent>
     </Styles.MainWrapper>
   );

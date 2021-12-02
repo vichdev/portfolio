@@ -17,6 +17,9 @@ body{
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  animation-duration: 0s;
+  -webkit-animation-duration: 0s ;
+  transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s ;
 }
 
 input,

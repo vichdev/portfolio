@@ -10,6 +10,7 @@ export const Button = styled.button`
   transition: ease 0.4s;
   font-weight: 700;
   padding: 5px;
+  align-items: center;
 
   &:hover {
     background-color: #d71e47;

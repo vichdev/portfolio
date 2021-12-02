@@ -1,14 +1,39 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Button } from "../../common/Button/styles";
 
-export const AboutWrapper = styled.div`
-  width: 100%;
+const AboutAnimation = keyframes`
+0% { top: 0px; right: -100%;}
+100% {top: 0px; right: 0px;}
+`;
+
+const AboutAnimationBackWard = keyframes`
+100% { top: 0px; right: -100%;}
+0% {top: 0px; right: 0px;}
+`;
+const AAAA = keyframes`
+100% { top: 0px; right: -100%;}
+0% {top: 0px; right: 0px;}
+`;
+
+export const AboutWrapper = styled.div<{
+  animation?: boolean;
+}>`
+  width: 100vw;
   margin: 0 auto;
   height: 100vh;
   background-color: #111111;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2999;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  animation-name: ${(props) =>
+    props.animation !== undefined &&
+    (props.animation ? AboutAnimation : AboutAnimationBackWard)};
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
 `;
 
 export const AboutContainer = styled.div`
@@ -92,3 +117,5 @@ export const BackButton = styled(Button)`
     }
   }
 `;
+
+export const ButtonProjects = styled(Button)``;

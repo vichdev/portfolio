@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as Styles from "./styles";
 import {
   SiReact,
@@ -10,18 +10,27 @@ import {
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/foto.jpeg";
-
 import Button from "../../common/Button";
+import { usePortfolio } from "../../context/AuthContext";
 
 const About: React.FC = () => {
+  const { about, setAbout, project, setProject } = usePortfolio();
+
   return (
-    <Styles.AboutWrapper>
+    <Styles.AboutWrapper animation={about}>
       <Styles.ButtonWrapper>
-        <Styles.BackButton>
+        <Styles.BackButton onClick={() => setAbout(!about)}>
           <FaAngleLeft />
           Voltar
         </Styles.BackButton>
-        <Button text={"Projetos"} />
+        <Styles.ButtonProjects
+          onClick={function () {
+            setProject(!project);
+            setAbout(!about);
+          }}
+        >
+          Projetos
+        </Styles.ButtonProjects>
       </Styles.ButtonWrapper>
       <Styles.AboutContainer>
         <Styles.AboutImg src={foto} />

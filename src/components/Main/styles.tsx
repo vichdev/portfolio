@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button } from "../../common/Button/styles";
 
 export const MainWrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@ export const MainWrapper = styled.div`
     rgb(162, 0, 73),
     rgba(0, 0, 0, 0)
   );
+  z-index: 1000;
 `;
 
 export const LogoWrapper = styled.div`
@@ -20,7 +21,7 @@ export const LogoWrapper = styled.div`
   width: 600px;
   justify-content: space-evenly;
   svg {
-    width: 150px;
+    width: 130px;
     height: 150px;
     color: #fff;
     text-shadow: 5px 5px 5px #000;
