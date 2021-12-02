@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styles from "./styles";
-import { pokestats } from "../../assets/pokemon.svg";
-import { loveflix } from "../../assets/loveflix.png";
+import pokestats from "../../assets/pokemon.svg";
+import loveflix from "../../assets/loveflix.png";
 import { FaAngleLeft } from "react-icons/fa";
 import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
