@@ -5,6 +5,7 @@ import {
   BsTelephoneFill,
   BsFillFileEarmarkArrowDownFill,
 } from "react-icons/bs";
+import curriculo from "../../assets/curriculo.pdf";
 import { FaAngleLeft } from "react-icons/fa";
 import { usePortfolio } from "../../context/AuthContext";
 
@@ -66,10 +67,7 @@ const Contact: React.FC = () => {
               </Styles.InformationWrapper>
               <Styles.InformationWrapper>
                 <BsFillFileEarmarkArrowDownFill />
-                <Styles.Links
-                  href={"../../assets/curriculo.pdf"}
-                  download="ResumeOfficial.pdf"
-                >
+                <Styles.Links href={curriculo} download={"ResumeOfficial.pdf"}>
                   Currículo
                 </Styles.Links>
               </Styles.InformationWrapper>
