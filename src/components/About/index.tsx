@@ -9,7 +9,7 @@ import {
   SiGit,
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
-import foto from "../../assets/foto.jpeg";
+import foto from "../../assets/personalfoto.jpg";
 import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
 
