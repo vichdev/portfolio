@@ -2,6 +2,7 @@ import React from "react";
 import * as Styles from "./styles";
 import pokestats from "../../assets/pokemon.svg";
 import loveflix from "../../assets/loveflix.png";
+import tictactoe from "../../assets/tictactoe.png";
 import { FaAngleLeft } from "react-icons/fa";
 import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
@@ -38,8 +39,8 @@ const Activity: React.FC = () => {
           <Styles.ProjWrapper>
             <Styles.ProjImg src={pokestats} color={"#00b1f7"} />
             <Styles.Projects>
-              <Styles.ProjH3>PokeStats</Styles.ProjH3>
-              <Styles.ProjSpan>Website</Styles.ProjSpan>
+              <Styles.ProjectLink>PokeStats</Styles.ProjectLink>
+              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
               <Styles.ProjsParagraph>
                 Site desenvolvido com intuito de praticar e estudar context API
                 e o consumo de APIs.
@@ -47,10 +48,22 @@ const Activity: React.FC = () => {
             </Styles.Projects>
           </Styles.ProjWrapper>
           <Styles.ProjWrapper>
+            <Styles.ProjImg src={tictactoe} color={"#E64C65"} />
+            <Styles.Projects>
+              <Styles.ProjectLink href={"https://tictactoe-vich.netlify.app"}>
+                TicTacToe | Jogo da velha
+              </Styles.ProjectLink>
+              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
+              <Styles.ProjsParagraph>
+                Jogo da velha desenvolvido em JavaScript.
+              </Styles.ProjsParagraph>
+            </Styles.Projects>
+          </Styles.ProjWrapper>
+          <Styles.ProjWrapper>
             <Styles.ProjImg src={loveflix} color={"#000"} />
             <Styles.Projects>
-              <Styles.ProjH3>LoveFlix</Styles.ProjH3>
-              <Styles.ProjSpan>Website</Styles.ProjSpan>
+              <Styles.ProjectLink>LoveFlix</Styles.ProjectLink>
+              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
               <Styles.ProjsParagraph>
                 Site Ainda em desenvolvimento com Leonardo Antunes, para
                 randomizar opções de comida, bebida, filmes e entre outros para

@@ -145,7 +145,6 @@ export const LinksSocialMedias = styled.a`
   opacity: 0.8;
   &:hover {
     opacity: 1;
-    font-weight: bold;
   }
 `;
 

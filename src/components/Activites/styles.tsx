@@ -103,6 +103,18 @@ export const ProjSpan = styled.span`
   margin-bottom: 15px;
 `;
 
+export const ProjectLink = styled.a`
+  color: #2b2929;
+  font-size: 18px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+  &:hover {
+    color: #d71e47;
+  }
+`;
+
 export const ProjsParagraph = styled.p`
   color: #2b2929;
   opacity: 0.8;
