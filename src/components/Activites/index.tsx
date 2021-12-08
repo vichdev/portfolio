@@ -39,7 +39,9 @@ const Activity: React.FC = () => {
           <Styles.ProjWrapper>
             <Styles.ProjImg src={pokestats} color={"#00b1f7"} />
             <Styles.Projects>
-              <Styles.ProjectLink>PokeStats</Styles.ProjectLink>
+              <Styles.ProjectLink href={"https://pokestats-vich.netlify.app"}>
+                PokeStats
+              </Styles.ProjectLink>
               <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
               <Styles.ProjsParagraph>
                 Site desenvolvido com intuito de praticar e estudar context API
