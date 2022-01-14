@@ -10,10 +10,13 @@ const Main: React.FC = () => {
     <Styles.MainWrapper>
       <Styles.MainContent>
         <Styles.LogoWrapper>
-          <VscCode />
           <Styles.LogoContent>
             <Styles.LogoTitle>Victor Hugo</Styles.LogoTitle>
-            <Styles.LogoSpan>Desenvolvedor Front-END</Styles.LogoSpan>
+            <Styles.LogoSpan>
+              {" "}
+              <VscCode />
+              Desenvolvedor Front-END
+            </Styles.LogoSpan>
           </Styles.LogoContent>
         </Styles.LogoWrapper>
         <Styles.ButtonMain onClick={() => setAbout(!about)}>

@@ -12,34 +12,42 @@ export const MainWrapper = styled.div`
     rgb(162, 0, 73),
     rgba(0, 0, 0, 0)
   );
-  z-index: 1000;
+
+  @media (max-width: 800px) and (min-width: 320px) {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 600px;
   justify-content: space-evenly;
-  svg {
-    width: 130px;
-    height: 150px;
-    color: #fff;
-    text-shadow: 5px 5px 5px #000;
-    border-right: 2px solid white;
-  }
 `;
 
 export const LogoContent = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 `;
 
 export const LogoSpan = styled.div`
+  display: flex;
+  align-items: center;
   color: #fff;
   text-transform: uppercase;
   text-shadow: 5px 5px 5px #000;
   margin-top: 5px;
+  svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+    margin-right: 5px;
+  }
 `;
 
 export const LogoTitle = styled.h1`

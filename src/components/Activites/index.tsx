@@ -3,8 +3,8 @@ import * as Styles from "./styles";
 import pokestats from "../../assets/pokemon.svg";
 import loveflix from "../../assets/loveflix.png";
 import tictactoe from "../../assets/tictactoe.png";
+import dtmoney from "../../assets/logo.svg";
 import { FaAngleLeft } from "react-icons/fa";
-import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
 
 const Activity: React.FC = () => {
@@ -28,11 +28,11 @@ const Activity: React.FC = () => {
         </Styles.ContactButton>
       </Styles.ButtonWrapper>
       <Styles.ProjectsContainer>
-        <Styles.PAnimated panimation={project} />
         <Styles.TitleWrapper>
           <Styles.ProjectsTitle>PROJETOS</Styles.ProjectsTitle>
           <Styles.ProjectsSpan>
             Principais projetos que já desenvolvi.
+            <Styles.PAnimated panimation={project} />
           </Styles.ProjectsSpan>
         </Styles.TitleWrapper>
         <Styles.ProjectsContent>
@@ -67,9 +67,24 @@ const Activity: React.FC = () => {
               <Styles.ProjectLink>LoveFlix</Styles.ProjectLink>
               <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
               <Styles.ProjsParagraph>
-                Site Ainda em desenvolvimento com Leonardo Antunes, para
-                randomizar opções de comida, bebida, filmes e entre outros para
-                uma noite de filmes entre amigos ou casais.
+                Site Ainda em desenvolvimento com coparticipação com Leonardo
+                Antunes, para randomizar opções de comida, bebida, filmes e
+                entre outros para uma noite de filmes entre amigos ou casais.
+              </Styles.ProjsParagraph>
+            </Styles.Projects>
+          </Styles.ProjWrapper>
+          <Styles.ProjWrapper>
+            <Styles.ProjImg src={dtmoney} color={"#5429CC"} />
+            <Styles.Projects>
+              <Styles.ProjectLink href={"https://dt-money-vh.netlify.app"}>
+                Dt Money | Rocketseat
+              </Styles.ProjectLink>
+              <Styles.ProjSpan>Website | 2022</Styles.ProjSpan>
+              <Styles.ProjsParagraph>
+                Projeto desenvolvido no curso de ReactJS pela rocketseat,
+                utilizando mirageJS como MockAPI, simulando uma planilha de
+                gastos. (Infelizmente a API funciona apenas localmente, para
+                rodar, baixar pelo GitHub.)
               </Styles.ProjsParagraph>
             </Styles.Projects>
           </Styles.ProjWrapper>

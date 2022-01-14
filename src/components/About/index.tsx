@@ -10,7 +10,6 @@ import {
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/personalfoto.jpg";
-import Button from "../../common/Button";
 import { usePortfolio } from "../../context/AuthContext";
 
 const About: React.FC = () => {
@@ -45,11 +44,11 @@ const About: React.FC = () => {
               Análise e Desenvolvimentos de Sistemas pelo IFS - Instituto
               Federal de Sergipe
             </Styles.AboutSpan>
-            . Porém estudando desenvolvimento web há 3 meses, sempre criando
-            projetos diversos para manter a prática em dia.
+            &nbsp;e estudando desenvolvimento web há 8 meses, sempre criando
+            projetos pessoais diversos para manter a prática em dia.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
-            Assim, busco desempenhar meu trabalho com excelência,
+            Assim, busco desempenhar meu trabalho com excelência,&nbsp;
             <Styles.AboutSpan>
               desenvolvendo aplicações web de alta qualidade, com código limpo,
               com boas práticas e responsivos
@@ -58,9 +57,10 @@ const About: React.FC = () => {
             buscando me aperfeiçoar cada vez mais nas tecnologias e práticas.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
-            Atualmente estou procurando meu primeiro emprego como
-            <Styles.AboutSpan> DESENVOLVEDOR FRONT-END</Styles.AboutSpan>,
-            disposto a realizar testes para provar minha capacidade!
+            Atualmente estou procurando meu primeiro emprego como&nbsp;
+            <Styles.AboutSpan>DESENVOLVEDOR FRONT-END</Styles.AboutSpan>,
+            disposto a realizar testes para provar minhas habilidades e
+            capacidades.
           </Styles.AboutParagraph>
           <Styles.AboutH2>Tecnologias</Styles.AboutH2>
           <Styles.TechnologiesWrappper color={"none"}>

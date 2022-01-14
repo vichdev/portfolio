@@ -27,6 +27,13 @@ export const ContactWrapper = styled.div<{ animate?: boolean }>`
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-direction: alternate;
+  @media (max-width: 800px) and (min-width: 320px) {
+    width: 100%;
+    height: 100%;
+    right: 100%;
+    top: -100%;
+    display: none;
+  }
 `;
 
 export const ContactContainer = styled.div`

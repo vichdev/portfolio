@@ -10,10 +10,6 @@ const AboutAnimationBackWard = keyframes`
 100% { top: 0px; right: -100%;}
 0% {top: 0px; right: 0px;}
 `;
-const AAAA = keyframes`
-100% { top: 0px; right: -100%;}
-0% {top: 0px; right: 0px;}
-`;
 
 export const AboutWrapper = styled.div<{
   animation?: boolean;
@@ -34,6 +30,12 @@ export const AboutWrapper = styled.div<{
     (props.animation ? AboutAnimation : AboutAnimationBackWard)};
   animation-duration: 1.7s;
   animation-fill-mode: forwards;
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
 `;
 
 export const AboutContainer = styled.div`
@@ -41,12 +43,23 @@ export const AboutContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 `;
 
 export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 900px;
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 300px;
+    display: flex;
+    text-align: justify;
+  }
 `;
 
 export const AboutImg = styled.img`
@@ -55,12 +68,21 @@ export const AboutImg = styled.img`
   border: 1px solid white;
   object-fit: cover;
   box-shadow: 2px 3px 5px #000;
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 150px;
+    height: 200px;
+    margin-top: 400px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const AboutTitle = styled.h1`
   color: #fff;
   font-size: 75px;
   text-shadow: 5px 5px 5px #000;
+  @media (max-width: 600px) and (min-width: 320px) {
+    font-size: 30px;
+  }
 `;
 
 export const AboutH2 = styled.h2`
@@ -70,6 +92,9 @@ export const AboutH2 = styled.h2`
   margin-bottom: 25px;
   border-bottom: 1px solid #fff;
   text-shadow: 1px 1px 5px #000;
+  @media (max-width: 600px) and (min-width: 320px) {
+    font-size: 20px;
+  }
 `;
 
 export const AboutParagraph = styled.p`
@@ -77,6 +102,10 @@ export const AboutParagraph = styled.p`
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 20px;
+  @media (max-width: 600px) and (min-width: 320px) {
+    font-size: 10px;
+    text-align: justify;
+  }
 `;
 
 export const AboutSpan = styled.span`
@@ -93,6 +122,12 @@ export const TechnologiesWrappper = styled.div<{ color: string }>`
     color: ${(props) => (props.color ? props.color : "#FFF")};
     margin-right: 25px;
   }
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 100%;
+    svg {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -102,6 +137,13 @@ export const ButtonWrapper = styled.div`
   position: absolute;
   top: 30px;
   right: 100px;
+  @media (max-width: 600px) and (min-width: 320px) {
+    width: 100%;
+    top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+  }
 `;
 
 export const BackButton = styled(Button)`
