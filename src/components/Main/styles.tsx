@@ -54,6 +54,9 @@ export const LogoTitle = styled.h1`
   color: #fff;
   font-size: 50px;
   text-shadow: 3px 3px 3px black;
+  @media (max-width: 800px) and (min-width: 320px) {
+    font-size: 40px;
+  }
 `;
 
 export const MainContent = styled.div`

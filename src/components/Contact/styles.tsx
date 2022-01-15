@@ -28,11 +28,8 @@ export const ContactWrapper = styled.div<{ animate?: boolean }>`
   animation-fill-mode: forwards;
   animation-direction: alternate;
   @media (max-width: 800px) and (min-width: 320px) {
-    width: 100%;
-    height: 100%;
-    right: 100%;
-    top: -100%;
-    display: none;
+    flex-direction: column;
+    overflow-y: scroll;
   }
 `;
 
@@ -43,6 +40,9 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
+  @media (max-width: 800px) and (min-width: 320px) {
+    align-items: center;
+  }
 `;
 
 export const ContactContent = styled.div`
@@ -51,18 +51,34 @@ export const ContactContent = styled.div`
   flex-direction: column;
   width: 700px;
   height: 500px;
+  @media (max-width: 800px) and (min-width: 320px) {
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+  }
 `;
 
 export const MainTitle = styled.h1`
   color: #fff;
   font-size: 40px;
   text-shadow: 2px 2px 3px #000;
+  @media (max-width: 800px) and (min-width: 320px) {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 80px;
+  }
 `;
 
 export const MainTitleWrapper = styled.div``;
 
 export const MainWrapper = styled.div`
   display: flex;
+  @media (max-width: 800px) and (min-width: 320px) {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const Contacts = styled.div`
@@ -71,12 +87,20 @@ export const Contacts = styled.div`
   width: 700px;
   height: 500px;
   align-items: center;
+  @media (max-width: 800px) and (min-width: 320px) {
+    height: 250px;
+    width: 100%;
+  }
 `;
 
 export const ContactsTitle = styled.h1`
   color: #fff;
   font-size: 30px;
   text-shadow: 2px 2px 3px #000;
+  @media (max-width: 800px) and (min-width: 320px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 export const SocialMediasWrapper = styled.div`
@@ -89,6 +113,14 @@ export const SocialMediasWrapper = styled.div`
   svg {
     cursor: pointer;
     font-size: 50px;
+  }
+  @media (max-width: 800px) and (min-width: 320px) {
+    svg {
+      font-size: 30px;
+    }
+    align-items: start;
+    width: 300px;
+    height: 150px;
   }
 `;
 
@@ -110,6 +142,10 @@ export const ContactsInformation = styled.div`
   flex-direction: column;
   height: 400px;
   justify-content: space-evenly;
+  @media (max-width: 800px) and (min-width: 320px) {
+    height: 200px;
+    justify-content: space-evenly;
+  }
 `;
 
 export const InformationWrapper = styled.div<{ cursor?: string }>`
@@ -132,6 +168,13 @@ export const InformationWrapper = styled.div<{ cursor?: string }>`
       background-color: #fff;
     }
   }
+  @media (max-width: 800px) and (min-width: 320px) {
+    width: 100%;
+    height: 100%;
+    svg {
+      font-size: 30px;
+    }
+  }
 `;
 
 export const Links = styled.a`
@@ -140,6 +183,9 @@ export const Links = styled.a`
   color: #fff;
   margin-left: 13px;
   padding: 10px;
+  @media (max-width: 800px) and (min-width: 320px) {
+    font-size: 16px;
+  }
 `;
 
 export const LinksSocialMedias = styled.a`
@@ -153,6 +199,10 @@ export const LinksSocialMedias = styled.a`
   &:hover {
     opacity: 1;
   }
+  @media (max-width: 800px) and (min-width: 320px) {
+    margin-left: 0;
+    font-size: 16px;
+  }
 `;
 
 export const ContactSpans = styled.span<{ cursor?: string }>`
@@ -161,11 +211,18 @@ export const ContactSpans = styled.span<{ cursor?: string }>`
   margin-left: 13px;
   cursor: ${(props) => (props.cursor ? props.cursor : "pointer")};
   transition: ease 0.4s;
+  @media (max-width: 800px) and (min-width: 320px) {
+    font-size: 20px;
+    margin-left: 0;
+  }
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
+  @media (max-width: 800px) and (min-width: 320px) {
+    justify-content: center;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -175,6 +232,13 @@ export const ButtonWrapper = styled.div`
   position: absolute;
   top: 30px;
   right: 100px;
+  @media (max-width: 800px) and (min-width: 320px) {
+    width: 100%;
+    top: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    right: 15px;
+  }
 `;
 
 export const BackButton = styled(Button)`

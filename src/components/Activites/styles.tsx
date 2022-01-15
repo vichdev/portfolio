@@ -110,6 +110,8 @@ export const ProjWrapper = styled.div`
     width: 90%;
     height: 180px;
     padding: 30px;
+    overflow-y: auto;
+    border-radius: 10px;
   }
 `;
 

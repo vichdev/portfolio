@@ -31,8 +31,7 @@ export const AboutWrapper = styled.div<{
   animation-duration: 1.7s;
   animation-fill-mode: forwards;
   @media (max-width: 600px) and (min-width: 320px) {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     overflow-y: scroll;
   }
@@ -44,10 +43,8 @@ export const AboutContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   @media (max-width: 600px) and (min-width: 320px) {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
-    justify-content: space-around;
   }
 `;
 
@@ -57,8 +54,10 @@ export const AboutContent = styled.div`
   width: 900px;
   @media (max-width: 600px) and (min-width: 320px) {
     width: 300px;
+    height: 100%;
     display: flex;
     text-align: justify;
+    align-items: center;
   }
 `;
 
@@ -70,9 +69,9 @@ export const AboutImg = styled.img`
   box-shadow: 2px 3px 5px #000;
   @media (max-width: 600px) and (min-width: 320px) {
     width: 150px;
-    height: 200px;
-    margin-top: 400px;
-    margin-bottom: 20px;
+    height: 500px;
+    margin-top: 350px;
+    margin-bottom: 15px;
   }
 `;
 
@@ -94,6 +93,9 @@ export const AboutH2 = styled.h2`
   text-shadow: 1px 1px 5px #000;
   @media (max-width: 600px) and (min-width: 320px) {
     font-size: 20px;
+    border-bottom: none;
+    height: 0;
+    margin-bottom: 40px;
   }
 `;
 
@@ -103,8 +105,9 @@ export const AboutParagraph = styled.p`
   line-height: 30px;
   margin-bottom: 20px;
   @media (max-width: 600px) and (min-width: 320px) {
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
+    margin-bottom: 10px;
   }
 `;
 
@@ -124,8 +127,11 @@ export const TechnologiesWrappper = styled.div<{ color: string }>`
   }
   @media (max-width: 600px) and (min-width: 320px) {
     width: 100%;
+    align-items: center;
+    justify-content: space-around;
     svg {
       margin-bottom: 20px;
+      margin-right: 0;
     }
   }
 `;
