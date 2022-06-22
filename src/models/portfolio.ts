@@ -5,4 +5,6 @@ export interface Portfolio {
   setProject: (project: boolean) => void;
   contact?: boolean;
   setContact: (contact: boolean) => void;
+  experience?: boolean;
+  setExperience: (experience: boolean) => void;
 }

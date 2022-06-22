@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styles from "./styles";
 import { VscCode } from "react-icons/vsc";
-import { usePortfolio } from "../../context/AuthContext";
+import { usePortfolio } from "../../context/Context";
 
 const Main: React.FC = () => {
   const { setAbout, about } = usePortfolio();

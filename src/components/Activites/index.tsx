@@ -5,7 +5,7 @@ import loveflix from "../../assets/loveflix.png";
 import tictactoe from "../../assets/tictactoe.png";
 import dtmoney from "../../assets/logo.svg";
 import { FaAngleLeft } from "react-icons/fa";
-import { usePortfolio } from "../../context/AuthContext";
+import { usePortfolio } from "../../context/Context";
 
 const Activity: React.FC = () => {
   const { project, setProject, about, setAbout, contact, setContact } =

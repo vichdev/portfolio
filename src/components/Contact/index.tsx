@@ -7,7 +7,7 @@ import {
 } from "react-icons/bs";
 import curriculo from "../../assets/curriculo.pdf";
 import { FaAngleLeft } from "react-icons/fa";
-import { usePortfolio } from "../../context/AuthContext";
+import { usePortfolio } from "../../context/Context";
 
 const Contact: React.FC = () => {
   const { contact, setContact } = usePortfolio();

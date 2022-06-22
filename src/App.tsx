@@ -4,7 +4,7 @@ import Activity from "./components/Activites";
 import Contact from "./components/Contact";
 import Main from "./components/Main";
 import Wrapper from "./components/Wrapper";
-import { Context } from "./context/AuthContext";
+import { Context } from "./context/Context";
 import { GlobalStyle } from "./styles/globalStyle";
 
 const App: React.FC = () => {

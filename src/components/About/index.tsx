@@ -10,7 +10,7 @@ import {
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/personalfoto.jpg";
-import { usePortfolio } from "../../context/AuthContext";
+import { usePortfolio } from "../../context/Context";
 
 const About: React.FC = () => {
   const { about, setAbout, project, setProject } = usePortfolio();

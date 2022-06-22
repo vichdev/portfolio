@@ -1,15 +1,16 @@
 import React, { createContext, useContext, useState } from "react";
 import { Portfolio } from "../models/portfolio";
 
-const AuthContext = createContext<Portfolio>({} as Portfolio);
+const PortfolioContext = createContext<Portfolio>({} as Portfolio);
 
 const Context: React.FC = ({ children }) => {
   const [about, setAbout] = useState<boolean>();
   const [project, setProject] = useState<boolean>();
   const [contact, setContact] = useState<boolean>();
+  const [experience, setExperience] = useState<boolean>();
 
   return (
-    <AuthContext.Provider
+    <PortfolioContext.Provider
       value={{
         about,
         setAbout,
@@ -17,15 +18,17 @@ const Context: React.FC = ({ children }) => {
         setProject,
         contact,
         setContact,
+        experience,
+        setExperience,
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </PortfolioContext.Provider>
   );
 };
 
 function usePortfolio() {
-  const Context = useContext(AuthContext);
+  const Context = useContext(PortfolioContext);
 
   if (!Context) {
     throw new Error("O hook usePortfolio deve ser usado como provider");
