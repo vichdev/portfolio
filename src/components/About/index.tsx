@@ -7,13 +7,15 @@ import {
   SiHtml5,
   SiCss3,
   SiGit,
+  SiVuedotjs,
+  SiJest,
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/personalfoto.jpg";
 import { usePortfolio } from "../../context/Context";
 
 const About: React.FC = () => {
-  const { about, setAbout, project, setProject } = usePortfolio();
+  const { about, setAbout, experience, setExperience } = usePortfolio();
 
   return (
     <Styles.AboutWrapper animation={about}>
@@ -22,14 +24,14 @@ const About: React.FC = () => {
           <FaAngleLeft />
           Voltar
         </Styles.BackButton>
-        <Styles.ButtonProjects
+        <Styles.ButtonExperience
           onClick={function () {
-            setProject(!project);
+            setExperience(!experience);
             setAbout(!about);
           }}
         >
-          Projetos
-        </Styles.ButtonProjects>
+          Experiências
+        </Styles.ButtonExperience>
       </Styles.ButtonWrapper>
       <Styles.AboutContainer>
         <Styles.AboutImg src={foto} />
@@ -41,11 +43,10 @@ const About: React.FC = () => {
             atualmente cursando{" "}
             <Styles.AboutSpan>
               {" "}
-              Análise e Desenvolvimentos de Sistemas pelo IFS - Instituto
-              Federal de Sergipe
+              Análise e Desenvolvimentos de Sistemas pela Estácio de Sá
             </Styles.AboutSpan>
-            &nbsp;e estudando desenvolvimento web há 8 meses, sempre criando
-            projetos pessoais diversos para manter a prática em dia.
+            &nbsp;e estudando desenvolvimento web há mais de um ano, sempre
+            criando projetos pessoais diversos para manter a prática em dia.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
             Assim, busco desempenhar meu trabalho com excelência,&nbsp;
@@ -57,19 +58,22 @@ const About: React.FC = () => {
             buscando me aperfeiçoar cada vez mais nas tecnologias e práticas.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
-            Atualmente estou procurando meu primeiro emprego como&nbsp;
-            <Styles.AboutSpan>DESENVOLVEDOR FRONT-END</Styles.AboutSpan>,
-            disposto a realizar testes para provar minhas habilidades e
-            capacidades.
+            Atualmente trabalho como&nbsp;
+            <Styles.AboutSpan>
+              DESENVOLVEDOR FRONT-END ESTAGIÁRIO
+            </Styles.AboutSpan>
+            , na Avonale Workplace.
           </Styles.AboutParagraph>
           <Styles.AboutH2>Tecnologias</Styles.AboutH2>
           <Styles.TechnologiesWrappper color={"none"}>
+            <SiReact color={"#04A5CF"} />
+            <SiVuedotjs color="#42b883" />
+            <SiJavascript color={"#F7E018"} />
+            <SiTypescript color={"#017ACC"} />
             <SiHtml5 color={"#E34C26"} />
             <SiCss3 color={"#016ABB"} />
-            <SiJavascript color={"#F7E018"} />
-            <SiReact color={"#04A5CF"} />
-            <SiTypescript color={"#017ACC"} />
             <SiGit color={"#F64D27"} />
+            <SiJest color="#99425b" />
           </Styles.TechnologiesWrappper>
         </Styles.AboutContent>
       </Styles.AboutContainer>

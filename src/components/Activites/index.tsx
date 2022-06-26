@@ -1,15 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
-import pokestats from "../../assets/pokemon.svg";
-import loveflix from "../../assets/loveflix.png";
-import tictactoe from "../../assets/tictactoe.png";
-import dtmoney from "../../assets/logo.svg";
+import { SiReact, SiJavascript, SiVuedotjs } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import { usePortfolio } from "../../context/Context";
+import { projetos, Tecnologias } from "./data/projetos";
+import Error from "../Error";
+
+interface IProjects {
+  name: string;
+  descricao: string;
+  tecnologia: Tecnologias;
+  img_path: string;
+  cor?: string;
+  observacao?: string;
+  url: string;
+}
 
 const Activity: React.FC = () => {
-  const { project, setProject, about, setAbout, contact, setContact } =
-    usePortfolio();
+  const [projectsArray, setProjectsArray] = useState<Array<IProjects>>([]);
+  const [displayProjects, setDisplayProjects] = useState<boolean>(true);
+
+  useEffect(() => {
+    console.log(displayProjects);
+  });
+
+  const {
+    project,
+    setProject,
+    contact,
+    setContact,
+    experience,
+    setExperience,
+  } = usePortfolio();
+
+  function selectReactProjects() {
+    const reactProjects = projetos.filter((item) => {
+      return item.tecnologia === Tecnologias.React;
+    });
+    setDisplayProjects(!displayProjects);
+    setProjectsArray(reactProjects);
+  }
+  function selectVueProjects() {
+    const vueProjects = projetos.filter((item) => {
+      return item.tecnologia === Tecnologias.Vue;
+    });
+    setDisplayProjects(!displayProjects);
+    setProjectsArray(vueProjects);
+  }
+  function selectNativeProjects() {
+    const nativeProjects = projetos.filter((item) => {
+      return item.tecnologia === Tecnologias.ReactNative;
+    });
+    setDisplayProjects(!displayProjects);
+    setProjectsArray(nativeProjects);
+  }
+  function selectJavaScriptProjects() {
+    const jsProjects = projetos.filter((item) => {
+      return item.tecnologia === Tecnologias.Javascript;
+    });
+    setDisplayProjects(!displayProjects);
+    setProjectsArray(jsProjects);
+  }
 
   return (
     <Styles.ProjectsWrapper animate={project}>
@@ -17,7 +68,7 @@ const Activity: React.FC = () => {
         <Styles.BackButton
           onClick={function () {
             setProject(!project);
-            setAbout(!about);
+            setExperience(!experience);
           }}
         >
           <FaAngleLeft />
@@ -27,68 +78,96 @@ const Activity: React.FC = () => {
           Contato
         </Styles.ContactButton>
       </Styles.ButtonWrapper>
-      <Styles.ProjectsContainer>
+      {displayProjects ? (
         <Styles.TitleWrapper>
-          <Styles.ProjectsTitle>PROJETOS</Styles.ProjectsTitle>
-          <Styles.ProjectsSpan>
-            Principais projetos que já desenvolvi.
-            <Styles.PAnimated panimation={project} />
-          </Styles.ProjectsSpan>
+          <Styles.Title>Selecione uma tecnologia</Styles.Title>
         </Styles.TitleWrapper>
-        <Styles.ProjectsContent>
-          <Styles.ProjWrapper>
-            <Styles.ProjImg src={pokestats} color={"#00b1f7"} />
-            <Styles.Projects>
-              <Styles.ProjectLink href={"https://pokestats-vich.netlify.app"}>
-                PokeStats
+      ) : (
+        <Styles.TitleWrapper>
+          <Styles.ResetButton
+            onClick={() => setDisplayProjects(!displayProjects)}
+          >
+            <FaAngleLeft />
+          </Styles.ResetButton>
+          <Styles.Title>Voltar para tecnologias</Styles.Title>
+        </Styles.TitleWrapper>
+      )}
+      <Styles.SelectedProjectsWrapper isSelected={displayProjects}>
+        {projectsArray.length > 0 ? (
+          projectsArray.map((item, index) => {
+            return (
+              <Styles.ProjectLink key={index} href={item.url}>
+                <Styles.SelectedsProjectsContainer>
+                  <Styles.TitleImgWrapper>
+                    <Styles.SelectedProjectsImg
+                      src={`${item.img_path}`}
+                      color={item.cor}
+                    />
+                    <Styles.SelectedsProjectsTitle>
+                      {item.name}
+                    </Styles.SelectedsProjectsTitle>
+                  </Styles.TitleImgWrapper>
+                  <Styles.SelectedsProjectsDescription>
+                    {item.descricao}
+                  </Styles.SelectedsProjectsDescription>
+                  {item.observacao ? (
+                    <Styles.SelectedObservation>
+                      {item.observacao}
+                    </Styles.SelectedObservation>
+                  ) : (
+                    ""
+                  )}
+                </Styles.SelectedsProjectsContainer>
               </Styles.ProjectLink>
-              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
-              <Styles.ProjsParagraph>
-                Site desenvolvido com intuito de praticar e estudar context API
-                e o consumo de APIs.
-              </Styles.ProjsParagraph>
-            </Styles.Projects>
-          </Styles.ProjWrapper>
-          <Styles.ProjWrapper>
-            <Styles.ProjImg src={tictactoe} color={"#E64C65"} />
-            <Styles.Projects>
-              <Styles.ProjectLink href={"https://tictactoe-vich.netlify.app"}>
-                TicTacToe | Jogo da velha
-              </Styles.ProjectLink>
-              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
-              <Styles.ProjsParagraph>
-                Jogo da velha desenvolvido em JavaScript.
-              </Styles.ProjsParagraph>
-            </Styles.Projects>
-          </Styles.ProjWrapper>
-          <Styles.ProjWrapper>
-            <Styles.ProjImg src={loveflix} color={"#000"} />
-            <Styles.Projects>
-              <Styles.ProjectLink>LoveFlix</Styles.ProjectLink>
-              <Styles.ProjSpan>Website | 2021</Styles.ProjSpan>
-              <Styles.ProjsParagraph>
-                Site Ainda em desenvolvimento com coparticipação com Leonardo
-                Antunes, para randomizar opções de comida, bebida, filmes e
-                entre outros para uma noite de filmes entre amigos ou casais.
-              </Styles.ProjsParagraph>
-            </Styles.Projects>
-          </Styles.ProjWrapper>
-          <Styles.ProjWrapper>
-            <Styles.ProjImg src={dtmoney} color={"#5429CC"} />
-            <Styles.Projects>
-              <Styles.ProjectLink href={"https://dt-money-vh.netlify.app"}>
-                Dt Money | Rocketseat
-              </Styles.ProjectLink>
-              <Styles.ProjSpan>Website | 2022</Styles.ProjSpan>
-              <Styles.ProjsParagraph>
-                Projeto desenvolvido no curso de ReactJS pela rocketseat,
-                utilizando mirageJS como MockAPI, simulando uma planilha de
-                gastos. (Infelizmente a API funciona apenas localmente, para
-                rodar, baixar pelo GitHub.)
-              </Styles.ProjsParagraph>
-            </Styles.Projects>
-          </Styles.ProjWrapper>
-        </Styles.ProjectsContent>
+            );
+          })
+        ) : (
+          <Error />
+        )}
+      </Styles.SelectedProjectsWrapper>
+      <Styles.ProjectsContainer isSelected={displayProjects}>
+        <Styles.Projects
+          color="#04A5CF"
+          shadowColor="#04A5CF"
+          onClick={() => {
+            selectReactProjects();
+          }}
+        >
+          <Styles.TechWrapper color="#04A5CF">
+            <SiReact />
+            <Styles.TechName>React</Styles.TechName>
+          </Styles.TechWrapper>
+        </Styles.Projects>
+        <Styles.Projects
+          color="#42b883"
+          shadowColor="#42b883"
+          onClick={() => selectVueProjects()}
+        >
+          <Styles.TechWrapper color="#42b883">
+            <SiVuedotjs />
+            <Styles.TechName>Vue</Styles.TechName>
+          </Styles.TechWrapper>
+        </Styles.Projects>
+        <Styles.Projects
+          color="#04A5CF"
+          shadowColor="#04A5CF"
+          onClick={() => selectNativeProjects()}
+        >
+          <Styles.TechWrapper color="#04A5CF">
+            <SiReact />
+            <Styles.TechName>React Native</Styles.TechName>
+          </Styles.TechWrapper>
+        </Styles.Projects>
+        <Styles.Projects
+          color="#F7E018"
+          shadowColor="#F7E018"
+          onClick={() => selectJavaScriptProjects()}
+        >
+          <Styles.TechWrapper color="#F7E018">
+            <SiJavascript />
+            <Styles.TechName>Javascript</Styles.TechName>
+          </Styles.TechWrapper>
+        </Styles.Projects>
       </Styles.ProjectsContainer>
     </Styles.ProjectsWrapper>
   );

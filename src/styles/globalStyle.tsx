@@ -3,6 +3,11 @@ import background from "../assets/background.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 
+:root {
+  --red: #d71e47;
+  --primary: #333333;
+}
+
 * {
   margin: 0;
   padding: 0;

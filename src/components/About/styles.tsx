@@ -166,4 +166,4 @@ export const BackButton = styled(Button)`
   }
 `;
 
-export const ButtonProjects = styled(Button)``;
+export const ButtonExperience = styled(Button)``;
