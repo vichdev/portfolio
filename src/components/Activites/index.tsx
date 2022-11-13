@@ -20,10 +20,6 @@ const Activity: React.FC = () => {
   const [projectsArray, setProjectsArray] = useState<Array<IProjects>>([]);
   const [displayProjects, setDisplayProjects] = useState<boolean>(true);
 
-  useEffect(() => {
-    console.log(displayProjects);
-  });
-
   const {
     project,
     setProject,

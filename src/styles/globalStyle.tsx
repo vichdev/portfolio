@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import background from "../assets/background.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -18,11 +17,9 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
   font: 400 14px Roboto, sans-serif;
-  backdrop-filter: blur(7px);
-  background-image: url(${background});
-  background-position: center;
-  background-size: cover;
+
   animation-duration: 0s;
+  z-index: 1;
   -webkit-animation-duration: 0s ;
   transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s ;
   overflow: hidden;

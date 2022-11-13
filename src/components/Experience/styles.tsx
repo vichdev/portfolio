@@ -56,6 +56,7 @@ export const ExperienceContent = styled.div`
   height: 60%;
   background-color: #fff;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   padding: 1rem;
   justify-content: flex-start;
@@ -83,7 +84,7 @@ export const TitleWrapper = styled.div`
 
 export const ProjectsTitle = styled.h1`
   color: #333333;
-  font-size: 75px;
+  font-size: 3rem;
   text-shadow: 1px 1px 1px #282322;
   @media (max-width: 800px) and (min-width: 320px) {
     font-size: 25px;
@@ -92,7 +93,7 @@ export const ProjectsTitle = styled.h1`
 
 export const ProjectsSpan = styled.h2`
   color: #d71e47;
-  font-size: 35px;
+  font-size: 2rem;
   text-shadow: 1px 1px 2px #000;
   @media (max-width: 800px) and (min-width: 320px) {
     font-size: 16px;

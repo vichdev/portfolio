@@ -15,7 +15,7 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #111111;
+  background-color: #eeeeee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +51,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: white;
+  color: #111111;
   margin-right: 1rem;
 `;
 
@@ -84,8 +84,7 @@ export const Projects = styled.div<{ color: string; shadowColor: string }>`
   border-radius: 9999rem;
   cursor: pointer;
   &:hover {
-    width: 13rem;
-    height: 13rem;
+    transform: scale(1.1);
     box-shadow: 1px 1px 15px 1px ${(props) => props.shadowColor};
   }
 `;
@@ -103,7 +102,7 @@ export const TechWrapper = styled.div<{ color: string }>`
 `;
 
 export const TechName = styled.span`
-  color: white;
+  color: #111111;
   font-size: 1rem;
 `;
 
@@ -158,6 +157,7 @@ export const SelectedsProjectsContainer = styled.div`
   border-radius: 1rem;
   cursor: pointer;
   text-align: center;
+  box-shadow: -1px -1px 15px 1px var(--primary);
   justify-content: space-evenly;
   width: 100%;
   max-width: 18rem;
@@ -165,7 +165,7 @@ export const SelectedsProjectsContainer = styled.div`
   max-height: 25rem;
   &:hover {
     opacity: 0.9;
-    box-shadow: 1px 1px 5px 5px var(--primary);
+    border: 2px solid var(--red);
   }
 `;
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button } from "../../common/Button/styles";
+import background from "../../assets/background.jpg";
 
 export const MainWrapper = styled.div`
   width: 100vw;
@@ -7,11 +8,9 @@ export const MainWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to right bottom,
-    rgb(162, 0, 73),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: url(${background});
+  background-position: center;
+  background-size: cover;
 
   @media (max-width: 800px) and (min-width: 320px) {
     width: 100vw;
@@ -60,11 +59,18 @@ export const LogoTitle = styled.h1`
 `;
 
 export const MainContent = styled.div`
-  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 0.5rem;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgb(162, 0, 73),
+    rgba(0, 0, 0, 0)
+  );
 `;
 
 export const ButtonMain = styled(Button)``;

@@ -15,11 +15,11 @@ export const ErrorContainer = styled.div`
   justify-content: space-evenly;
   height: 50%;
   svg {
-    color: #fff;
+    color: #111111;
     font-size: 10rem;
   }
 `;
 
 export const ErrorMessage = styled.h1`
-  color: #fff;
+  color: #111111;
 `;

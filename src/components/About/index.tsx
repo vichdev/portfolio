@@ -39,13 +39,13 @@ const About: React.FC = () => {
           <Styles.AboutTitle>Victor Hugo</Styles.AboutTitle>
           <Styles.AboutH2>Desenvolvedor Front-End </Styles.AboutH2>
           <Styles.AboutParagraph>
-            Olá, meu nome é Victor Hugo, tenho 22 anos, sou de Aracaju/SE,
+            Olá, meu nome é Victor Hugo, tenho 23 anos, sou de Aracaju/SE,
             atualmente cursando{" "}
             <Styles.AboutSpan>
               {" "}
               Análise e Desenvolvimentos de Sistemas pela Estácio de Sá
             </Styles.AboutSpan>
-            &nbsp;e estudando desenvolvimento web há mais de um ano, sempre
+            &nbsp;, focando no desenvolvimento web há mais de dois anos, sempre
             criando projetos pessoais diversos para manter a prática em dia.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
@@ -59,10 +59,8 @@ const About: React.FC = () => {
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
             Atualmente trabalho como&nbsp;
-            <Styles.AboutSpan>
-              DESENVOLVEDOR FRONT-END ESTAGIÁRIO
-            </Styles.AboutSpan>
-            , na Avonale Workplace.
+            <Styles.AboutSpan>DESENVOLVEDOR FRONT-END JR I</Styles.AboutSpan>,
+            na Avonale Workplace.
           </Styles.AboutParagraph>
           <Styles.AboutH2>Tecnologias</Styles.AboutH2>
           <Styles.TechnologiesWrappper color={"none"}>

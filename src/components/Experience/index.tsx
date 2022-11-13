@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
       </Styles.ButtonWrapper>
       <Styles.ProjectsContainer>
         <Styles.TitleWrapper>
-          <Styles.ProjectsTitle>EMPRESAS</Styles.ProjectsTitle>
+          <Styles.ProjectsTitle>Experiências</Styles.ProjectsTitle>
           <Styles.ProjectsSpan>
             Principais empresas em que já trabalhei.
             <Styles.PAnimated panimation={experience} />
