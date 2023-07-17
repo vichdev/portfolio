@@ -17,6 +17,7 @@ import {
   SiAwsamplify,
   SiNodedotjs,
   SiDocker,
+  SiBootstrap,
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/personalfoto.jpg";
@@ -91,6 +92,7 @@ const About: React.FC = () => {
           <Styles.TechnologiesWrappper color={"none"}>
             <SiTailwindcss color={"#04A5CF"} />
             <SiRedux color={"#764abc"} />
+            <SiBootstrap color={"#7d11f2"} />
             <SiStyledcomponents color="#ca5fb3" />
             <SiAwsamplify color={"#04A5CF"} />
             <SiDocker color={"#04A5CF"} />
