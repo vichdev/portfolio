@@ -34,7 +34,9 @@ const About: React.FC = () => {
         </Styles.ButtonExperience>
       </Styles.ButtonWrapper>
       <Styles.AboutContainer>
-        <Styles.AboutImg src={foto} />
+        <Styles.AboutImgWrapper>
+          <Styles.AboutImg src={foto} />
+        </Styles.AboutImgWrapper>
         <Styles.AboutContent>
           <Styles.AboutTitle>Victor Hugo</Styles.AboutTitle>
           <Styles.AboutH2>Desenvolvedor Front-End </Styles.AboutH2>
@@ -45,7 +47,7 @@ const About: React.FC = () => {
               {" "}
               Análise e Desenvolvimentos de Sistemas pela Estácio de Sá
             </Styles.AboutSpan>
-            &nbsp;, focando no desenvolvimento web há mais de dois anos, sempre
+            , focando no desenvolvimento web há mais de dois anos, sempre
             criando projetos pessoais diversos para manter a prática em dia.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>

@@ -18,6 +18,7 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
   background-color: #fff;
   display: flex;
   bottom: -100%;
+  flex-direction: column;
   left: 0px;
   z-index: 2999;
   animation-name: ${(props) =>
@@ -40,8 +41,9 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
 export const ProjectsContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   @media (max-width: 800px) and (min-width: 320px) {
     width: 100%;
@@ -74,7 +76,7 @@ export const TitleWrapper = styled.div`
   width: 60%;
   padding: 1rem;
   height: 70%;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 1300px) and (min-width: 320px) {
     width: 100%;
     margin-left: 10px;
     height: 200px;
@@ -103,7 +105,7 @@ export const ProjectsSpan = styled.h2`
 
 export const ExperienceWrapper = styled.div`
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 100%;
   padding: 1.5rem;
   box-shadow: 1px 1px 5px 1px #000;
@@ -115,7 +117,6 @@ export const ExperienceWrapper = styled.div`
     opacity: 1;
   }
   @media (max-width: 800px) and (min-width: 320px) {
-    width: 90%;
     height: 180px;
     padding: 30px;
     overflow-y: auto;
@@ -126,6 +127,7 @@ export const ExperienceWrapper = styled.div`
 export const Projects = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 90px;
   @media (max-width: 800px) and (min-width: 320px) {
     width: 100%;

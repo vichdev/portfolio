@@ -15,7 +15,7 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #eeeeee;
+  background-color: #111111;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,11 +139,14 @@ export const BackButton = styled(Button)`
 
 export const ContactButton = styled(Button)``;
 
-export const SelectedProjectsWrapper = styled.div<{ isSelected: boolean }>`
-  display: ${(props) => (props.isSelected ? "none" : "flex")};
+export const SelectedProjectsWrapper = styled.div`
+  display: flex;
   width: 100%;
-  height: 80%;
-  justify-content: space-around;
+  height: 70%;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
 `;
 
@@ -163,6 +166,8 @@ export const SelectedsProjectsContainer = styled.div`
   max-width: 18rem;
   height: 100%;
   max-height: 25rem;
+  min-height: 25rem;
+  margin-bottom: 2rem;
   &:hover {
     opacity: 0.9;
     border: 2px solid var(--red);
@@ -185,6 +190,7 @@ export const TitleImgWrapper = styled.div`
   max-height: 8rem;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
   align-items: center;
 `;
 
@@ -202,4 +208,10 @@ export const SelectedProjectsImg = styled.img`
 export const SelectedObservation = styled.span`
   margin-top: 1rem;
   color: red;
+`;
+
+export const TabsWrapper = styled.div`
+  position: absolute;
+  left: 5rem;
+  top: 0.75rem;
 `;

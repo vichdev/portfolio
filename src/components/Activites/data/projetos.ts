@@ -1,7 +1,8 @@
 export enum Tecnologias {
-  React,
+  React = 0,
   ReactNative,
   Vue,
+  NodeJS,
   Javascript,
 }
 
@@ -10,6 +11,8 @@ import tictactoe_img from "../../../assets/tictactoe.png";
 import dtmoney_img from "../../../assets/logo.svg";
 import timer_img from "../../../assets/timer.svg";
 import todolist_img from "../../../assets/todolist.svg";
+import clingest from "../../../assets/clingest.svg";
+import node from "../../../assets/node.jpg";
 
 export const projetos = [
   {
@@ -59,5 +62,51 @@ export const projetos = [
     img_path: `${todolist_img}`,
     cor: "#e64c65",
     url: "https://github.com/vichdev/ToDoListNative",
+  },
+  {
+    name: "ClinGest",
+    descricao:
+      "Aplicação com formulário para agendamento de consultas e interação com Whatsapp. Utilizando Next/JS",
+    tecnologia: Tecnologias.React,
+    img_path: `${clingest}`,
+    cor: "#fff",
+    url: "https://tamara-agendamento.netlify.app/",
+  },
+  {
+    name: "NodeEJS (SSR)",
+    descricao:
+      "Aplicação feita para estudo da renderização server-side de um HTML utilizando apenas NodeJS com Express, mudando todos os metadados de acordo com a chamada da API.",
+    tecnologia: Tecnologias.NodeJS,
+    img_path: `${node}`,
+    cor: "#85be49",
+    url: "https://github.com/vichdev/node-ejs",
+  },
+  {
+    name: "CRUD Backend",
+    descricao:
+      "Criação de uma API para utilizar em um CRUD que foi feito em ReactJS, utilizando NodeJS, Typescript, Express.",
+    tecnologia: Tecnologias.NodeJS,
+    img_path: `${todolist_img}`,
+    cor: "#e64c65",
+    url: "https://github.com/vichdev/nodejs-todolist-backend",
+  },
+  {
+    name: "Nuxt SSR Pokemon",
+    descricao:
+      "Criação de aplicação em NuxtJS com intuito de estudar o server side rendering para rendenrizar pokemons. Foi consumido a api PokeAPI",
+    tecnologia: Tecnologias.Vue,
+    img_path: `${pokemon_img}`,
+    cor: "#85be49",
+    url: "https://github.com/vichdev/NuxtSSRPokemon",
+  },
+
+  {
+    name: "CRUD de tarefas",
+    descricao:
+      "CRUD de criação de tarefas, utilizando ReactJS, consumindo minha própria API construida em NODEJS com Express.",
+    tecnologia: Tecnologias.React,
+    img_path: `${todolist_img}`,
+    cor: "#e64c65",
+    url: "https://github.com/vichdev/todolist",
   },
 ];
