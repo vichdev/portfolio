@@ -5,7 +5,7 @@ import {
   BsTelephoneFill,
   BsFillFileEarmarkArrowDownFill,
 } from "react-icons/bs";
-import curriculo from "../../assets/CV_VICTOR_PT_BR.pdf";
+import curriculo from "../../assets/Curriculo_Victor_2023_ptBR.pdf";
 import { FaAngleLeft } from "react-icons/fa";
 import { usePortfolio } from "../../context/Context";
 

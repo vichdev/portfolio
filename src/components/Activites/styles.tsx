@@ -15,7 +15,7 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #111111;
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   justify-content: center;

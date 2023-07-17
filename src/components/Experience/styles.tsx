@@ -27,7 +27,7 @@ export const ProjectsWrapper = styled.div<{ animate?: boolean }>`
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-direction: alternate;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     width: 100%;
     display: flex;
     height: 100vh;
@@ -45,7 +45,7 @@ export const ProjectsContainer = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     width: 100%;
     height: 1000px;
     flex-direction: column;
@@ -63,7 +63,7 @@ export const ExperienceContent = styled.div`
   padding: 1rem;
   justify-content: flex-start;
   align-items: flex-end;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     width: 100%;
     height: 800px;
     justify-content: space-evenly;
@@ -88,7 +88,7 @@ export const ProjectsTitle = styled.h1`
   color: #333333;
   font-size: 3rem;
   text-shadow: 1px 1px 1px #282322;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     font-size: 25px;
   }
 `;
@@ -97,7 +97,7 @@ export const ProjectsSpan = styled.h2`
   color: #d71e47;
   font-size: 2rem;
   text-shadow: 1px 1px 2px #000;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     font-size: 16px;
     text-shadow: none;
   }
@@ -116,10 +116,10 @@ export const ExperienceWrapper = styled.div`
   &:hover {
     opacity: 1;
   }
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     height: 180px;
-    padding: 30px;
     overflow-y: auto;
+    padding-top: 0;
     border-radius: 10px;
   }
 `;
@@ -129,7 +129,7 @@ export const Projects = styled.div`
   flex-direction: column;
   width: 100%;
   height: 90px;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     width: 100%;
     text-align: justify;
   }
@@ -145,6 +145,10 @@ export const ExperienceImg = styled.img`
   margin-right: 20px;
   padding: 5px;
   box-shadow: 1px 1px 9px 1px #000;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const ProjH3 = styled.h3`
@@ -163,23 +167,33 @@ export const ExpNameWrapper = styled.div`
   margin-bottom: 0.5rem;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 `;
 
 export const CompanyName = styled.span`
   color: var(--primary);
   font-size: 1.5rem;
   font-weight: 500;
+  @media (max-width: 850px) and (min-width: 320px) {
+    font-size: 1rem;
+  }
 `;
 
 export const CompanyJob = styled.span`
   color: var(--primary);
   font-size: 1rem;
+  @media (max-width: 850px) and (min-width: 320px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const CompanyData = styled.span`
   color: #d71e47;
   font-weight: 700;
   align-self: flex-end;
+  @media (max-width: 850px) and (min-width: 320px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const CompanyNameWrapper = styled.div`
@@ -204,18 +218,19 @@ export const ExperienceLink = styled.a`
 export const ProjsParagraph = styled.p`
   color: #2b2929;
   opacity: 0.8;
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     font-size: 12px;
+    padding: 0 0 1rem 0;
   }
 `;
 
 const PAnimation = keyframes`
 0% {width: 5%;}
-100% {width: 45%;}
+100% {width: 60%;}
 `;
 
 export const PAnimated = styled.p<{ panimation: boolean | undefined }>`
-  width: 45%;
+  width: 50%;
   border: 1px solid #d71e47;
   margin-top: 15px;
   position: absolute;
@@ -234,7 +249,7 @@ export const ButtonWrapper = styled.div`
   top: 30px;
   right: 100px;
 
-  @media (max-width: 800px) and (min-width: 320px) {
+  @media (max-width: 850px) and (min-width: 320px) {
     width: 100%;
     top: 10px;
     justify-content: space-evenly;

@@ -74,3 +74,9 @@ export const MainContent = styled.div`
 `;
 
 export const ButtonMain = styled(Button)``;
+
+export const Image = styled.img`
+  border-radius: 9099rem;
+  width: 15rem;
+  height: 15rem;
+`;

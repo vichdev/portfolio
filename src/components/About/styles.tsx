@@ -141,6 +141,7 @@ export const TechnologiesWrappper = styled.div<{ color: string }>`
   justify-content: start;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
   svg {
     font-size: 35px;
     color: ${(props) => (props.color ? props.color : "#FFF")};

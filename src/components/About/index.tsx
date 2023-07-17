@@ -9,6 +9,14 @@ import {
   SiGit,
   SiVuedotjs,
   SiJest,
+  SiTailwindcss,
+  SiStyledcomponents,
+  SiRedux,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiAwsamplify,
+  SiNodedotjs,
+  SiDocker,
 } from "react-icons/si";
 import { FaAngleLeft } from "react-icons/fa";
 import foto from "../../assets/personalfoto.jpg";
@@ -45,35 +53,47 @@ const About: React.FC = () => {
             atualmente cursando{" "}
             <Styles.AboutSpan>
               {" "}
-              Análise e Desenvolvimentos de Sistemas pela Estácio de Sá
+              Análise e Desenvolvimentos de Sistemas pela Universidade Estácio
+              de Sá
             </Styles.AboutSpan>
-            , focando no desenvolvimento web há mais de dois anos, sempre
-            criando projetos pessoais diversos para manter a prática em dia.
+            , fluente no desenvolvimento web front end, desenvolvendo grandes
+            aplicações a nível nacional e escaláveis, principalmente B2B&#39;s
+            do mundo automotivo.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
-            Assim, busco desempenhar meu trabalho com excelência,&nbsp;
+            Busco desempenhar meu trabalho com excelência,&nbsp;
             <Styles.AboutSpan>
-              desenvolvendo aplicações web de alta qualidade, com código limpo,
-              com boas práticas e responsivos
+              desenvolvendo aplicações web de alta qualidade, com código limpo e
+              boas práticas
             </Styles.AboutSpan>
-            , que se traduza em um site agradável de usar e manter. Sempre
-            buscando me aperfeiçoar cada vez mais nas tecnologias e práticas.
+            , que se traduza em um site agradável de se usar e manter.
           </Styles.AboutParagraph>
           <Styles.AboutParagraph>
             Atualmente trabalho como&nbsp;
-            <Styles.AboutSpan>DESENVOLVEDOR FRONT-END JR I</Styles.AboutSpan>,
+            <Styles.AboutSpan>DESENVOLVEDOR FRONT-END JR IV</Styles.AboutSpan>,
             na Avonale Workplace.
           </Styles.AboutParagraph>
           <Styles.AboutH2>Tecnologias</Styles.AboutH2>
           <Styles.TechnologiesWrappper color={"none"}>
             <SiReact color={"#04A5CF"} />
             <SiVuedotjs color="#42b883" />
+            <SiNextdotjs color={"#000000"} />
+            <SiNuxtdotjs color="#42b883" />
+            <SiNodedotjs color="#5aaa46" />
             <SiJavascript color={"#F7E018"} />
             <SiTypescript color={"#017ACC"} />
             <SiHtml5 color={"#E34C26"} />
             <SiCss3 color={"#016ABB"} />
             <SiGit color={"#F64D27"} />
             <SiJest color="#99425b" />
+          </Styles.TechnologiesWrappper>
+          <Styles.AboutH2>Outras tecnologias</Styles.AboutH2>
+          <Styles.TechnologiesWrappper color={"none"}>
+            <SiTailwindcss color={"#04A5CF"} />
+            <SiRedux color={"#764abc"} />
+            <SiStyledcomponents color="#ca5fb3" />
+            <SiAwsamplify color={"#04A5CF"} />
+            <SiDocker color={"#04A5CF"} />
           </Styles.TechnologiesWrappper>
         </Styles.AboutContent>
       </Styles.AboutContainer>
